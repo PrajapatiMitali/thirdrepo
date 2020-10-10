@@ -1,0 +1,122 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very_Dark_Blue: hsl(234, 12%, 34%);
+  --Grayish_Blue: hsl(229, 6%, 66%);
+  --Very_Light_Gray: hsl(186, 33%, 94%);
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("../festivals/images/moon.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--Very_Dark_Blue);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.85;
+  position: relative;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.card-section {
+  margin: 5rem 0;
+}
+.card {
+  background-color: rgb(247, 244, 247);
+  border-radius: 20px;
+  box-shadow: 2px 10px 10px 10px rgba(136, 185, 207, 0.1);
+  width: 100%;
+  height: 250px;
+  margin-bottom: 2rem;
+  position: relative;
+  padding: 2rem;
+}
+.card img {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 20px;
+}
+h1 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+h2,
+p {
+  color: var(--Grayish_Blue);
+}
+h2 {
+  margin-top: 1rem;
+  font-weight: 200;
+}
+h4 {
+  font-size: 17px;
+  font-weight: 600;
+}
+.holi {
+  border-top: 4px solid var(--Cyan);
+}
+.nava {
+  border-top: 4px solid var(--Orange);
+}
+.ganesh {
+  border-top: 4px solid var(--Red);
+}
+.diwali {
+  border-top: 4px solid var(--Blue);
+}
+.footer {
+  text-align: center;
+  padding: 0 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .header p {
+    width: 50%;
+  }
+  .card {
+    margin-bottom: 0.3rem;
+  }
+  .card-section {
+    display: grid;
+    grid-auto-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "holi diwali nava "
+      "holi ganesh nava ";
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .holi {
+    grid-area: holi;
+  }
+  .nava {
+    grid-area: nava;
+  }
+  .diwali {
+    grid-area: diwali;
+  }
+  .ganesh {
+    grid-area: ganesh;
+  }
+}
